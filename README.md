@@ -1,8 +1,8 @@
 # Airborne-emssion-demo
 
-Aeromon BH-12 measurement devices have been installed on trams in Helsinki to collect data on air quality. Some datasets are publicaly available on the Helsinki Open data service, aiming to make bette use of public data. I have downloaded soem of the datasets for exploration and basic ML analysis with regression and clustering. Four sets of devices were used, there isntalled on the trams (moving) and the fourth at a fixed location (supersite).
+Aeromon BH-12 measurement devices have been installed on trams in Helsinki to collect data on air quality. Some datasets are publicaly available on the Helsinki Open data service, aiming to make bette use of public data. I downloaded some of the datasets for exploration and basic ML analysis with regression and clustering. Four sets of devices were used, three installed on the trams (moving) and the fourth at a fixed location (supersite).
 
-The dataset has been downloaded from Helsinki Region Infoshare service on 09.11.2025 under the license Creative Commons Attribution 4.0.
+The datasets have been downloaded from Helsinki Region Infoshare service on 09.11.2025 under the license Creative Commons Attribution 4.0.
 
 The datasets contain raw and processed files.
 The raw data have been processed to reduce hte noise, as explained in the data repository: 
@@ -27,13 +27,13 @@ Comment
 
 ## Project aim 
 This project explores real-world air quality sensor data from Helsinki, applying simple modeling and visualization techniques
-to understand how pollutant concentrations vary with time and conditions.
+to understand how pollutant concentrations vary with time and what are other conditions that affect them.
 
 ## Project features 
 ### Features
 - Data processing: reading files from one month, both moving and supersite; handling negative values; changing the format of the timestamp; concatenating and exploring the data.
 - Regression model predicting NO₂ levels from the remaining features.
-  - I tested different sets of predictors, and the combination of the measurement station data (moving and superstation) increased the coefficient of determination, R². However, it remained very low below 20% of variance explained by the independent variables. Due to high-frequency spatial variability in mobile sensor data and the effect of the direct emssions sources, simple linear models based on temperature, humidity, hour-of-day  etc., do not fully capture pollutant fluctuations, resulting in small R² values. RMSE remains low due to the small magnitude of measured concentrations. Among the predictor variables, ozone concentration have the largest effect on the NO emissions (coefficient 2.07). 
+  - I tested different sets of predictors, and the combination of the measurement station data (moving and superstation) increased the coefficient of determination, R². However, it remained very low below 20% of variance explained by the independent variables. Due to high-frequency spatial variability in mobile sensor data and the effect of the direct emissions sources, simple linear models based on temperature, humidity, hour-of-day  etc., do not fully capture pollutant fluctuations, resulting in small R² values. RMSE remains low due to the small magnitude of measured concentrations. Among the predictor variables, ozone concentration have the largest effect on the NO emissions (coefficient 2.07). 
 - Visualization of the measured and predicited NO concentrations.
-- PCA of the independant variables in the regression model, and k-means clustering. The points in the PCA were finally colored based on the cluster assignment. This can helpe further exploration of hte effect on the the different measurements on the variable of interest. 
+- PCA of the independant variables in the regression model, and k-means clustering. The points in the PCA were finally colored based on the cluster assignment. This can helpe further exploration of the effect on the the different measurements on the variable of interest. 
 - Tools: Python, Pandas, scikit-learn, Matplotlib
