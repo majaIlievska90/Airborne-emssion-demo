@@ -11,7 +11,7 @@ The raw data have been processed to reduce hte noise, as explained in the data r
 * Sensor noise level has been filtered slightly to remove signal alteration which derives from effects not connected to sensor response towards gas concentration change.
   
 
-The columns in the procseesed files represent: 
+The columns in the procseesed files represent:\
 timestamp = time in seconds (starting from '1970-01-01 00:00:00')\
 spora-id = specifying the tram in which the devices were installed\
 latitude = latitude coordinate\
@@ -31,7 +31,9 @@ to understand how pollutant concentrations vary with time and conditions.
 
 ## Project features 
 ### Features
-- Data cleaning and preprocessing (handling missing and noisy data)
-- Regression model predicting NO₂ levels from temporal features
-- Visualization of trends and emission-like patterns
+- Data processing: reading files from one month, both moving and supersite; handling negative values; changing the format of the timestamp; concatenating and exploring the data.\
+- Regression model predicting NO₂ levels from the remaining features.\
+  - I tested different sets of predictors, and the combination of the measurement station data (moving and superstation) increased the coefficient of determination, R². However, it remained very low below 20% of variance explained by the independent variables. Due to high-frequency spatial variability in mobile sensor data and the effect of the direct emssions sources, simple linear models based on temperature, humidity, hour-of-day  etc., do not fully capture pollutant fluctuations, resulting in small R² values. RMSE remains low due to the small magnitude of measured concentrations. Among the predictor variables, ozone concentration have the largest effect on the NO emissions (coefficient 2.07). 
+- Visualization of the measured and predicited NO concentrations.
+- PCA of the independant variables in the regression model, and k-means clustering. The points in the PCA were finally colored based on the cluster assignment. This can helpe further exploration of hte effect on the the different measurements on the variable of interest. 
 - Tools: Python, Pandas, scikit-learn, Matplotlib
