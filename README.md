@@ -32,7 +32,7 @@ to understand how pollutant concentrations vary with time and what are other con
 ## Project features 
 ### Features
 - Data processing: reading files from one month, both moving and supersite; handling negative values; changing the format of the timestamp; concatenating and exploring the data.
-- Bar plot of the emssions of NO, CO2 and O3 across hours of the day, for each day. By visually exploring this plots, O3 concentrations appear higher during early morning hours. CO2 concentrations appear higher during the day, while NO emmisions seem more uniform throughout the day. 
+- Bar plot of the emssions of NO, CO2 and O3 across hours of the day, for each day. By visually exploring these plots, O3 concentrations appear higher during early morning hours. CO2 concentrations appear higher during the day, while NO emmisions seem more uniform throughout the day. 
 - Regression model predicting NO₂ levels from the remaining features.
   - I tested different sets of predictors, and the combination of the measurement station data (moving and superstation) increased the coefficient of determination, R². Due to high-frequency spatial variability in mobile sensor data and the effect of the direct emissions sources, simple linear models based on temperature, humidity, hour-of-day  etc., do not fully capture pollutant fluctuations, resulting in smaller R² values (< 0.5). RMSE remains low due to the small magnitude of measured concentrations. Among the predictor variables, ozone concentration have the largest effect on the NO emissions (coefficient 2.07). 
 - Visualization of the measured and predicited NO concentrations.
