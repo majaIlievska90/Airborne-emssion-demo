@@ -12,17 +12,17 @@ The raw data have been processed to reduce hte noise, as explained in the data r
   
 
 The columns in the procseesed files represent: 
-timestamp = time in seconds (starting from '1970-01-01 00:00:00')
-spora-id = specifying the tram in which the devices were installed
-latitude = latitude coordinate
-longitude = longitude coordinate
-NO = nitric oxide
-NO2 = nitrogen dioxide
-O3 = ozone
-CO = carbon oxide
-BME680_pressure = air pressure measured using BME680 sensor
-BME680_humidity = humidity measured using BME680 sensor
-BME680_temperature = temperature measured using BME680 sensor
+timestamp = time in seconds (starting from '1970-01-01 00:00:00')\
+spora-id = specifying the tram in which the devices were installed\
+latitude = latitude coordinate\
+longitude = longitude coordinate\
+NO = nitric oxide\
+NO2 = nitrogen dioxide\
+O3 = ozone\
+CO = carbon oxide\
+BME680_pressure = air pressure measured using BME680 sensor\
+BME680_humidity = humidity measured using BME680 sensor\
+BME680_temperature = temperature measured using BME680 sensor\
 Comment
 
 ## Project aim 
